@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>canvas练习</title>
+</head>
+<body>
+  <!-- 不用通过css设置宽高 -->
+  <canvas id="demo" width="600" height="600">
+    ie9上才支持canvas
+  </canvas>
+  <script>
+    var canvas = document.getElementById('demo')
+    var ctx = canvas.getContext('2d')
+
+    ctx.moveTo(100,100)
+    ctx.lineTo(200,100)
+    ctx.lineTo(100,200)
+    
+    ctx.stroke()
+  </script>
+</body>
+</html>
