@@ -13,13 +13,22 @@
   </canvas>
   <script>
     var canvas = document.getElementById('demo')
+    canvas.style.border = '1px solid red'
     var ctx = canvas.getContext('2d')
 
     ctx.moveTo(100,100)
     ctx.lineTo(200,100)
     ctx.lineTo(100,200)
-    
+    // 设置闭合
+    ctx.closePath()
+    // 设置线颜色
+    ctx.strokeStyle = 'red'
+    // 设置线宽
+    ctx.lineWidth = 4
     ctx.stroke()
+    // 填充颜色
+    ctx.fillStyle = 'red'
+    ctx.fill()
   </script>
 </body>
 </html>
