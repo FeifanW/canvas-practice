@@ -32,25 +32,50 @@
     // ctx.fill()
 
     /* 练习二、画一个网格 */
+    // canvas.width = 600
+    // canvas.height = 600
+    // canvas.style.border = '1px solid #000'
+
+    // var rectH = 10
+    // var rectW = 10
+    // ctx.lineWidth = .5
+
+    // // 绘制表格
+    // // 绘制横线
+    // for(let i=0; i<canvas.width / rectH; i++) {
+    //   ctx.moveTo(0 , i*rectH)
+    //   ctx.lineTo(canvas.width, i*rectH)
+
+    //   // 绘制竖线
+    //   ctx.moveTo(i* rectW, 0)
+    //   ctx.lineTo(i* rectW, canvas.height)
+    // }
+
+    // ctx.stroke()
+
+    /* 练习三、画三个横线 */
     canvas.width = 600
     canvas.height = 600
     canvas.style.border = '1px solid #000'
+    ctx.strokeStyle = 'red'
+    ctx.lineWidth = 20
+    // 第一条线
+    ctx.beginPath()  // 开一个新路径，开启新状态
+    ctx.moveTo(100,100)
+    ctx.lineTo(300,100)
+    ctx.stroke()
 
-    var rectH = 10
-    var rectW = 10
-    ctx.lineWidth = .5
-
-    // 绘制表格
-    // 绘制横线
-    for(let i=0; i<canvas.width / rectH; i++) {
-      ctx.moveTo(0 , i*rectH)
-      ctx.lineTo(canvas.width, i*rectH)
-
-      // 绘制竖线
-      ctx.moveTo(i* rectW, 0)
-      ctx.lineTo(i* rectW, canvas.height)
-    }
-
+    // 第二条线
+    ctx.beginPath() 
+    ctx.strokeStyle = 'green'
+    ctx.moveTo(100,200)
+    ctx.lineTo(300,200)
+    ctx.stroke()
+    // 第三条线
+    ctx.beginPath()  
+    ctx.strokeStyle = 'orange'
+    ctx.moveTo(100,300)
+    ctx.lineTo(300,300)
     ctx.stroke()
   </script>
 </body>
