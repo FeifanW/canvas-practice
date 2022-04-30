@@ -13,22 +13,45 @@
   </canvas>
   <script>
     var canvas = document.getElementById('demo')
-    canvas.style.border = '1px solid red'
     var ctx = canvas.getContext('2d')
+    
+    /* 练习一、画一个三角形 */
+    // canvas.style.border = '1px solid red'
+    // ctx.moveTo(100,100)
+    // ctx.lineTo(200,100)
+    // ctx.lineTo(100,200)
+    // // 设置闭合
+    // ctx.closePath()
+    // // 设置线颜色
+    // ctx.strokeStyle = 'red'
+    // // 设置线宽
+    // ctx.lineWidth = 4
+    // ctx.stroke()
+    // // 填充颜色
+    // ctx.fillStyle = 'red'
+    // ctx.fill()
 
-    ctx.moveTo(100,100)
-    ctx.lineTo(200,100)
-    ctx.lineTo(100,200)
-    // 设置闭合
-    ctx.closePath()
-    // 设置线颜色
-    ctx.strokeStyle = 'red'
-    // 设置线宽
-    ctx.lineWidth = 4
+    /* 练习二、画一个网格 */
+    canvas.width = 600
+    canvas.height = 600
+    canvas.style.border = '1px solid #000'
+
+    var rectH = 10
+    var rectW = 10
+    ctx.lineWidth = .5
+
+    // 绘制表格
+    // 绘制横线
+    for(let i=0; i<canvas.width / rectH; i++) {
+      ctx.moveTo(0 , i*rectH)
+      ctx.lineTo(canvas.width, i*rectH)
+
+      // 绘制竖线
+      ctx.moveTo(i* rectW, 0)
+      ctx.lineTo(i* rectW, canvas.height)
+    }
+
     ctx.stroke()
-    // 填充颜色
-    ctx.fillStyle = 'red'
-    ctx.fill()
   </script>
 </body>
 </html>
